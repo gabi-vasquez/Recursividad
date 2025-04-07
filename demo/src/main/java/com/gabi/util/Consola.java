@@ -3,17 +3,20 @@ package com.gabi.util;
 import java.util.Scanner;
 
 public class Consola {
-    public static int pedirNumero(){
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    // Metodo de pedir un numero utlizando recursividad
+    public static int pedirNumeroRecursivo() {
         int numero = 0;
         System.out.println("Introduce un número:");
-        Scanner sc = new Scanner(System.in);
-        try{
-            numero = sc.nextInt();
-        }catch(Exception e){
+        try {
+            numero = scanner.nextInt();
+        } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
-            System.out.println("Introduce un número:");
-        } finally{
-            sc.close();
+            return pedirNumeroRecursivo();
+        } finally {
+            scanner.close();
         }
         return numero;
     }
