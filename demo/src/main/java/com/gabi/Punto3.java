@@ -6,6 +6,7 @@ public class Punto3 {
     //O(n)
     public static void main(String[] args) {
         Punto3 punto3 = new Punto3();
+        System.out.println("Introduce un número:");
         int numero = Consola.pedirNumeroRecursivo();
         double resultado = punto3.calcularSumatoriaFracciones(numero);
         System.out.println("La sumatoria de 1 + ½ + … 1/" + numero + " es " + resultado);

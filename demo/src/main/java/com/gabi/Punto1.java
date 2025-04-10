@@ -8,9 +8,10 @@ public class Punto1 {
 
     public static void main(String[] args) {
         Punto1 punto1 = new Punto1();
+        System.out.println("Introduce un número:");
         int numero = Consola.pedirNumeroRecursivo();
         int resultado = punto1.calcularFactorial(numero);
-        System.out.println("El factorial de 5 es: " + resultado);
+        System.out.println("El factorial de " + numero + " es: " + resultado);
     }
 
     public int calcularFactorial(int numero) {

@@ -8,16 +8,13 @@ public class Consola {
 
     // Metodo de pedir un numero utlizando recursividad
     public static int pedirNumeroRecursivo() {
-        int numero = 0;
-        System.out.println("Introduce un número:");
         try {
-            numero = scanner.nextInt();
+            return scanner.nextInt();
         } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("Entrada inválida. Por favor, ingresa un número entero:");
+            scanner.nextLine(); // limpiar el buffer
             return pedirNumeroRecursivo();
-        } finally {
-            scanner.close();
         }
-        return numero;
     }
+
 }

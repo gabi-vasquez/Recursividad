@@ -7,6 +7,7 @@ public class Punto4 {
     //O(n)
     public static void main(String[] args) {
         Punto4 punto4 = new Punto4();
+        System.out.println("Introduce un número:");
         int numero = Consola.pedirNumeroRecursivo();
         int resultado = punto4.sumarDigitosNumero(numero);
         System.out.println("La sumatoria de los digitos de " + numero + " es " + resultado);
