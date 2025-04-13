@@ -2,6 +2,7 @@ package com.gabi;
 import com.gabi.util.Consola;
 
 public class Punto1 {
+    //Gabriela Orozco Vasquez
     //1. Leer un numero entero y n calcular la factorial de dicho número.
     //Tipo de bigout o tipo de complejidad de la funcion calcularFactorial
     //O(n)

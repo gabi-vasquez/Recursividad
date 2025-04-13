@@ -1,25 +1,22 @@
 package com.gabi;
 
 import com.gabi.util.Consola;
-
 public class Punto10 {
-    // 10. Leer 2 números enteros y realizar la multiplicación de los 2 números mediante sumas sucesivas.
-    // Tipo de complejidad: O(n)
-
+    //10. Leer 2 números enteros y realizar la multiplicación de los 2 números mediante sumas sucesivas.
     public static void main(String[] args) {
         Punto10 punto10 = new Punto10();
-        System.out.println("Ingrese el primer numero: ");
+        System.out.println("Introduce el primer número:");
         int numero1 = Consola.pedirNumeroRecursivo();
-        System.out.println("Ingrese el segundo numero: ");
+        System.out.println("Introduce el segundo número:");
         int numero2 = Consola.pedirNumeroRecursivo();
-        int resultado = punto10.multiplicarRecursivo(numero1, numero2);
-        System.out.println("La multiplicación de " + numero1 + " y " + numero2 + " es " + resultado);
+        int resultado = punto10.multiplicar(numero1, numero2);
+        System.out.println("El resultado de la multiplicación es: " + resultado);
     }
 
-    public int multiplicarRecursivo(int numero1, int numero2) {
-        if (numero1 == 0 || numero2 == 0) {
+    public int multiplicar(int numero1, int numero2) {
+        if (numero2 == 0) {
             return 0;
         }
-        return numero1 + multiplicarRecursivo(numero1, numero2 - 1);
+        return numero1 + multiplicar(numero1, numero2 - 1);
     }
 }
